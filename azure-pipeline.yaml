@@ -23,12 +23,12 @@ stages:
           - task: DownloadSecureFile@1
             name: download_ssh_key
             inputs:
-              secureFile: "agent"
+              secureFile: "agent.pem"
 
           - script: |
               mkdir -p ~/.ssh
-              cp $(download_ssh_key.secureFilePath) ~/.ssh/agent
-              chmod 600 ~/.ssh/agent
+              cp $(download_ssh_key.secureFilePath) ~/.ssh/agent.pem
+              chmod 600 ~/.ssh/agent.pem
               echo "StrictHostKeyChecking no" > ~/.ssh/config
             displayName: "Setup SSH Private Key"
 
