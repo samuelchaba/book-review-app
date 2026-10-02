@@ -7,8 +7,8 @@
 - name: Set ownership to azureuser for frontend app
   file:
     path: /opt/frontend
-    owner: azureuser
-    group: azureuser
+    owner: ubuntu
+    group: ubuntu
     recurse: yes
 
 - name: Install frontend dependencies
