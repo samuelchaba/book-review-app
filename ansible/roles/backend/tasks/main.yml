@@ -8,8 +8,8 @@
 - name: Set ownership to azureuser for backend app
   file:
     path: /opt/backend
-    owner: azureuser
-    group: azureuser
+    owner: ubuntu
+    group: ubuntu
     recurse: yes
 
 - name: Install backend dependencies
